@@ -9,6 +9,26 @@
 </head>
 <body>
 	<h1 class="header">Your Online Library</h1>
-	<h2 class="addBook">+ Add Book</h2>
+
+<!-- Form for inputting book information -->
+
+	<button class="addBookbutton">+ Add Book</button>
+	<div id="addBookDiv" class="hidden">
+		<form>
+			<label for="title">Title</label>
+			<input type="text" id="title" name="title">
+
+			<label for="author">Author</label>
+			<input type="text" id="author" name="author">
+
+			<label for="pages">Pages</label>
+			<input type="number" id="pages" name="pages">
+
+			<label for="read">Have you read the book?</label>
+			<input type="checkbox" id="read" name="read">
+
+			<button type="submit">Add</button>
+		</form>
+	</div>
 </body>
 </html>
