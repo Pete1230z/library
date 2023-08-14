@@ -38,6 +38,14 @@ form > div > label {
 	font-weight: bold;
 }
 
+#radial > input {
+	width: 10%;
+}
+
+#radial > label {
+	justify-self: center;
+}
+
 button {
 	padding: 10px;
     background-color: #007BFF;
