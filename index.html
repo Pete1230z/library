@@ -12,23 +12,34 @@
 
 <!-- Form for inputting book information -->
 
-	<button class="addBookbutton">+ Add Book</button>
+	<h2 class="addBookbutton">+ Add Book</h2>
+
 	<div id="addBookDiv" class="hidden">
+
 		<form>
-			<label for="title">Title</label>
+		   <div class="formGroup">
+			<label for="title">Title:</label>
 			<input type="text" id="title" name="title">
+		   </div>
 
-			<label for="author">Author</label>
+		   <div class="formGroup">
+			<label for="author">Author:</label>
 			<input type="text" id="author" name="author">
+           </div>
 
-			<label for="pages">Pages</label>
-			<input type="number" id="pages" name="pages">
+		   <div class="formGroup">
+			<label for="pages">Pages:</label>
+			<input type="number" min="0" id="pages" name="pages">
+		   </div>
 
-			<label for="read">Have you read the book?</label>
+		   <div class="formGroup">
 			<input type="checkbox" id="read" name="read">
+			<label for="read">Have you read the book?</label>
+		   </div>
 
 			<button type="submit">Add</button>
 		</form>
+
 	</div>
 </body>
 </html>

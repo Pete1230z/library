@@ -5,4 +5,51 @@
 body {
 	text-align: center;
 	background-color:darkturquoise;
+	height: 100vh;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 40vh;
+	height: 40vh;
+	justify-content: left;
+	background-color: white;
+	border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form > div {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+}
+
+form > div > input {
+	width: 100%;
+	padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form > div > label {
+	font-weight: bold;
+}
+
+button {
+	padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	width: 40%;
+	margin: 0 auto;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
