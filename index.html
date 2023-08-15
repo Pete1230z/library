@@ -10,36 +10,40 @@
 <body>
 	<h1 class="header">Your Online Library</h1>
 
-<!-- Form for inputting book information -->
+<!-- Begin form for inputting book information -->
 
 	<h2 id="addBookButton">+ Add Book</h2>
 
-	<div id="addBookDiv" class="hidden">
+	<div id="addBookDiv">
 
 		<form>
+
 		   <div class="formGroup">
 			<label for="title">Title:</label>
-			<input type="text" id="title" name="title">
+			<input type="text" id="title" name="title" required>
 		   </div>
 
 		   <div class="formGroup">
 			<label for="author">Author:</label>
-			<input type="text" id="author" name="author">
+			<input type="text" id="author" name="author" required>
            </div>
 
 		   <div class="formGroup">
 			<label for="pages">Pages:</label>
-			<input type="number" min="0" id="pages" name="pages">
+			<input type="number" min="0" id="pages" name="pages" required>
 		   </div>
 
 		   <div class="formGroup" id="radial">
-			<input type="checkbox" id="read" name="read">
+			<input type="checkbox" id="read" name="read" required>
 			<label for="read">Have you read the book?</label>
 		   </div>
 
-			<button type="submit">Add</button>
+			<button id="submit" type="submit">Submit</button>
 		</form>
 
 	</div>
+
+<!-- End form for inputting book information -->
+
 </body>
 </html>

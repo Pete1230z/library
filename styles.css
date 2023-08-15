@@ -4,7 +4,7 @@
 
 body {
 	text-align: center;
-	font-family: Arial, sans-serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
     background-color: #f8f8f8; 
     color: black;
 	height: 100vh;
@@ -65,22 +65,26 @@ form > div > label {
 
 button {
 	padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #0fc74c;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 	width: 40%;
 	margin: 0 auto;
+	font-weight: bold;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0fc74c;
+	opacity: 80%;
 }
 
-.hidden {
-	display: none;
+#addBookDiv {
+	visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 /*End all for the form*/
