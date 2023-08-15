@@ -4,9 +4,13 @@
 
 body {
 	text-align: center;
-	background-color:darkturquoise;
+	font-family: Arial, sans-serif;
+    background-color: #f8f8f8; 
+    color: #333;
 	height: 100vh;
 }
+
+/*Begin all for the form*/
 
 form {
 	display: flex;
@@ -62,3 +66,9 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.hidden {
+	display: none;
+}
+
+/*End all for the form*/

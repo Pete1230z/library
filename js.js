@@ -10,6 +10,8 @@ function addToLibrary () {
 
 }
 
-const bookAddition = document.getElementsByClassName('addBook').addEventListener('click', function () {
-	addToLibrary()
+const bookAddition = document.getElementById('addBookButton');
+
+bookAddition.addEventListener('click', function() {
+    addBookDiv.style.display = 'flex'
 })
