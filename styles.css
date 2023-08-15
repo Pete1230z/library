@@ -10,6 +10,7 @@ body {
 
 form {
 	display: flex;
+	margin: 0 auto;
 	flex-direction: column;
 	width: 40vh;
 	height: 40vh;
