@@ -7,14 +7,14 @@ function Book(title, author, pages, read) {
 	this.read = read;
 }
 
-
 function addToLibrary() {
 	const title = document.getElementById('title').value;
 	const author = document.getElementById('author').value;
 	const pages = document.getElementById('pages').value;
 	const read = document.getElementById('read').checked; 
 	const newBook = new Book(title, author, pages, read);
-	console.log(newBook);
+	myLibrary.push(newBook);
+	render();
 }
 
 /*Makes form appear when Add Book is clicked on*/
