@@ -9,16 +9,26 @@ function Book(title, author, pages, read) {
 
 function renderHtml (book) {
 
-	//Gets the shelf id
+
 	const bookShelf = document.getElementById('shelf');
-
-	//Creates a new div
 	const newDiv = document.createElement('div');
+	newDiv.className = 'shelfFormat'
 
-	//Passes in text content from book information passed in the form
-	newDiv.textContent = `${book.title}, ${book.author}, ${book.pages}, ${book.read}`;
+	//Creates a div for each element so they can be styled more easily
+	const titleDiv = document.createElement('div');
+	titleDiv.textContent = `${book.title}`;
+    const authorDiv = document.createElement('div');
+	authorDiv.textContent = `${book.author}`;
+	const pagesDiv = document.createElement('div');
+	pagesDiv.textContent = `${book.pages}`;
+	const readDiv = document.createElement('div');
+	readDiv.textContent = `${book.read}`;
 
-	newDiv.className = 'shelf'
+	//Appends the divs being created to newDiv
+    newDiv.appendChild(titleDiv);
+	newDiv.appendChild(authorDiv);
+	newDiv.appendChild(pagesDiv);
+	newDiv.appendChild(readDiv);
 
 	//Appends the new div created to the div with the shelf class
 	bookShelf.appendChild(newDiv);

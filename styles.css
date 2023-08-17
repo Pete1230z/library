@@ -99,4 +99,11 @@ button:hover {
 	grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-rows: repeat(2, 1fr);
 	height: 50vh;
+	gap: 10px;
+}
+
+.shelfFormat {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
