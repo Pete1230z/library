@@ -26,6 +26,15 @@ bookAddition.addEventListener('click', function() {
 	addBookDiv.style.opacity = '1';
 })
 
+/*When anywhere but the form is clicked on it will make the form disappear*/
+
+document.addEventListener('click',function(event) {
+     if(!addBookDiv.contains(event.target) && event.target !== bookAddition) { 
+	 addBookDiv.style.visibility = 'hidden';
+	 addBookDiv.style.opacity = '0';
+	 }
+})
+
 document.getElementById('form').addEventListener('submit', function() {
 	event.preventDefault();
 	addToLibrary();
