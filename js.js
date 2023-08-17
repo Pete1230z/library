@@ -49,7 +49,12 @@ document.addEventListener('click',function(event) {
      if(!addBookDiv.contains(event.target) && event.target !== bookAddition) { 
 	 addBookDiv.style.visibility = 'hidden';
 	 addBookDiv.style.opacity = '0';
-	 document.querySelectorAll('#formGroup').innerHTML = ''
+
+	 //Resets all values in form inputs when clicked out of form
+	 document.getElementById('title').value = ''
+	 document.getElementById('author').value = ''
+	 document.getElementById('pages').value = ''
+	 document.getElementById('read').checked = false
 	 }
 })
 
