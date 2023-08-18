@@ -1,18 +1,20 @@
 let myLibrary = []
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, readStatus) {
 	this.title = title;
 	this.author = author;
 	this.pages = pages;
-	this.read = read;
+	this.readStatus = readStatus;
 }
 
+//Takes the elements passed in addToLibrary and adds them to the HTML
 function renderHtml (book) {
-
 
 	const bookShelf = document.getElementById('shelf');
 	const newDiv = document.createElement('div');
 	newDiv.className = 'shelfFormat'
+	const buttonContainer = document.createElement('div')
+	buttonContainer.className = 'btnContainer'
 
 	//Creates a div for each element so they can be styled more easily
 	const titleDiv = document.createElement('div');
@@ -21,25 +23,50 @@ function renderHtml (book) {
 	authorDiv.textContent = `${book.author}`;
 	const pagesDiv = document.createElement('div');
 	pagesDiv.textContent = `${book.pages}`;
-	const readDiv = document.createElement('div');
-	readDiv.textContent = `${book.read}`;
+	const readDiv = document.createElement('button');
+	readDiv.textContent = `${book.readStatus}`;
+	readDiv.className = 'reader';
+	const deleteDiv = document.createElement('button')
+	deleteDiv.textContent = 'Delete';
+	deleteDiv.className = 'del';
+
+	function updateButtonColor() {
+		if(book.readStatus === 'Read') {
+			readDiv.style.backgroundColor = '#167fc5';
+			readDiv.addEventListener('mouseover', function() {
+				readDiv.style.backgroundColor = '#167fc5';
+				readDiv.style.opacity = '0.8';
+			})
+			readDiv.addEventListener('mouseout', function() {
+				readDiv.style.backgroundColor = '#167fc5';
+				readDiv.style.opacity = '1';
+			})
+		} 
+	}
+
+    buttonContainer.appendChild(readDiv);
+	buttonContainer.appendChild(deleteDiv);
 
 	//Appends the divs being created to newDiv
     newDiv.appendChild(titleDiv);
 	newDiv.appendChild(authorDiv);
 	newDiv.appendChild(pagesDiv);
-	newDiv.appendChild(readDiv);
+	newDiv.appendChild(buttonContainer);
 
 	//Appends the new div created to the div with the shelf class
 	bookShelf.appendChild(newDiv);
+	updateButtonColor();
 }
 
+//Gets the values of the form inputs
 function addToLibrary() {
 	const title = document.getElementById('title').value;
 	const author = document.getElementById('author').value;
 	const pages = document.getElementById('pages').value;
-	const read = document.getElementById('read').checked; 
-	const newBook = new Book(title, author, pages, read);
+	const read = document.getElementById('read').checked;
+	const readStatus = read ? 'Read' : 'Not Read';
+
+	const newBook = new Book(title, author, pages, readStatus);
 	myLibrary.push(newBook);
 
 	//Sends new book information to the renderHtml function
