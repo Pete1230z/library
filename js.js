@@ -8,7 +8,7 @@ function Book(title, author, pages, readStatus) {
 }
 
 //Takes the elements passed in addToLibrary and adds them to the HTML
-function renderHtml (book) {
+function renderHtml(book) {
 
 	const bookShelf = document.getElementById('shelf');
 	const newDiv = document.createElement('div');
@@ -30,6 +30,7 @@ function renderHtml (book) {
 	deleteDiv.textContent = 'Delete';
 	deleteDiv.className = 'del';
 
+	//Updates button color based on if it is read or not read when initially created by form
 	function updateButtonColor() {
 		if(book.readStatus === 'Read') {
 			readDiv.style.backgroundColor = '#167fc5';
@@ -41,8 +42,28 @@ function renderHtml (book) {
 				readDiv.style.backgroundColor = '#167fc5';
 				readDiv.style.opacity = '1';
 			})
-		} 
+		} else {
+			readDiv.style.backgroundColor = '#CCCCCC';
+			readDiv.addEventListener('mouseover', function() {
+				readDiv.style.backgroundColor = '#CCCCCC';
+				readDiv.style.opacity = '0.8';
+			})
+			readDiv.addEventListener('mouseout', function() {
+				readDiv.style.backgroundColor = '#CCCCCC';
+				readDiv.style.opacity = '1';
+			})
+		}
 	}
+
+	//States how read/not read button will act when it is clicked on after it has been created in the form
+	function toggleReadStatus() {
+		book.readStatus = book.readStatus === 'Read' ? 'Not Read' : 'Read';
+		readDiv.textContent = book.readStatus;
+		updateButtonColor();
+	}
+
+	//Changes toggleReadStatus everytime it is clicked on
+	readDiv.addEventListener('click', toggleReadStatus);
 
     buttonContainer.appendChild(readDiv);
 	buttonContainer.appendChild(deleteDiv);
@@ -100,3 +121,4 @@ document.getElementById('form').addEventListener('submit', function() {
 	event.preventDefault();
 	addToLibrary();
 })
+
