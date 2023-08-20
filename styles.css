@@ -1,5 +1,5 @@
 * {
-	border: 1px solid black;
+
 }
 
 body {
@@ -8,7 +8,6 @@ body {
     background-color: #90AFC5; 
     color: black;
 	height: 100vh;
-	font-weight: bold;
 }
 
 #addBookButton {
@@ -36,9 +35,8 @@ form {
 	justify-content: left;
 	background-color: #C4DFE6;
 	border: 1px solid white;
-	color: #3E363F;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	color: black;
+	border-radius: 5px;
 }
 
 form > div {
@@ -50,15 +48,14 @@ form > div {
 form > div > input {
 	width: 100%;
 	padding: 10px;
-    border: 1px solid #3E363F;
-    border-radius: 5px;
 	background-color: #C4DFE6;
-	color: #3E363F;
-	font-weight: bold;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 5px;
 }
 
 form > div > label {
-	font-weight: bold;
+	margin-right: 2px;
 }
 
 #radial > input {
@@ -79,7 +76,8 @@ button {
     transition: background-color 0.3s ease;
 	width: 40%;
 	margin: 0 auto;
-	font-weight: bold;
+	margin-bottom: 5px;
+	font-family: 'Roboto', sans-serif;
 }
 
 button:hover {
@@ -98,8 +96,6 @@ button:hover {
 #shelf {
 	display: grid;
 	padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 	grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-rows: repeat(2, 1fr);
 	height: 50vh;
@@ -112,12 +108,17 @@ button:hover {
 	justify-content: space-evenly;
 	border-radius: 5px;
 	background-color: #C4DFE6;
-	color: #3E363F;
+	color: black;
 }
 
 .btnContainer {
 	display: flex;
 	color: #3E363F;
+	font-family: 'Roboto', sans-serif;
+}
+
+.reader {
+	font-family: 'Roboto', sans-serif;
 }
 
 .reader:hover {
@@ -127,6 +128,7 @@ button:hover {
 
 .del {
     background-color: red;
+	font-family: 'Roboto', sans-serif;
 }
 
 .del:hover {
