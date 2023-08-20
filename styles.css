@@ -4,10 +4,11 @@
 
 body {
 	text-align: center;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+	font-family: 'Roboto', sans-serif;
     background-color: #90AFC5; 
     color: black;
 	height: 100vh;
+	font-weight: bold;
 }
 
 #addBookButton {
@@ -53,6 +54,7 @@ form > div > input {
     border-radius: 5px;
 	background-color: #C4DFE6;
 	color: #3E363F;
+	font-weight: bold;
 }
 
 form > div > label {

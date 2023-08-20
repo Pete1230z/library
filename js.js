@@ -9,13 +9,6 @@ function Book(title, author, pages, readStatus) {
 
 //Global Variables
 const bookShelf = document.getElementById('shelf');
-const newDiv = document.createElement('div');
-const buttonContainer = document.createElement('div')
-const titleDiv = document.createElement('div');
-const authorDiv = document.createElement('div');
-const pagesDiv = document.createElement('div');
-const readDiv = document.createElement('button');
-const deleteDiv = document.createElement('button');
 const read = document.getElementById('read').checked;
 const readStatus = read ? 'Read' : 'Not Read';
 const newBook = new Book(title, author, pages, readStatus);
@@ -23,15 +16,27 @@ const newBook = new Book(title, author, pages, readStatus);
 //Takes the elements passed in addToLibrary and adds them to the HTML
 function renderHtml(book) {
 
+    const newDiv = document.createElement('div');
 	newDiv.className = 'shelfFormat'
+
+	const buttonContainer = document.createElement('div')
 	buttonContainer.className = 'btnContainer'
 
 	//Creates a div for each element so they can be styled more easily
+	const titleDiv = document.createElement('div');
 	titleDiv.textContent = `${book.title}`;
+
+	const authorDiv = document.createElement('div');
 	authorDiv.textContent = `${book.author}`;
+
+	const pagesDiv = document.createElement('div');
 	pagesDiv.textContent = `${book.pages}`;
+
+	const readDiv = document.createElement('button');
 	readDiv.textContent = `${book.readStatus}`;
 	readDiv.className = 'reader';
+
+	const deleteDiv = document.createElement('button');
 	deleteDiv.textContent = 'Delete';
 	deleteDiv.className = 'del';
 
