@@ -62,7 +62,7 @@ function renderHtml(book) {
 		updateButtonColor();
 	}
 
-	//Changes toggleReadStatus everytime it is clicked on
+	//Changes toggleReadStatus every time it is clicked on
 	readDiv.addEventListener('click', toggleReadStatus);
 
     buttonContainer.appendChild(readDiv);
@@ -77,6 +77,11 @@ function renderHtml(book) {
 	//Appends the new div created to the div with the shelf class
 	bookShelf.appendChild(newDiv);
 	updateButtonColor();
+
+	deleteDiv.addEventListener('click', function() {
+		bookShelf.removeChild(newDiv);
+	})
+
 }
 
 //Gets the values of the form inputs
